@@ -38,8 +38,8 @@ defmodule Indie.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:webmention, path: "~/webmention"}
-     # {:webmention, github: "tjgillies/webmention"}
+     # {:webmention, path: "~/webmention"}
+     {:webmention, github: "tjgillies/webmention", branch: "master"}
 
 
     ]
