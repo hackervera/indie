@@ -23,7 +23,16 @@ defmodule Indie.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    scope "/private" do
+      get "/:slug", PageController, :private
+    end
+    scope "/content" do
+      get "/", PageController, :static_index
+      get "/:slug", PageController, :static
+    end
   end
+
+  
 
   # # Other scopes may use custom stacks.
   # scope "/api", Indie do
@@ -45,7 +54,7 @@ defmodule Indie.Router do
   end
 
   def callback(content) do
-    IO.inspect "YAY WE HAVE #{inspect content}"
+    Logger.debug "YAY WE HAVE #{inspect content}"
   end
 
   def token_function(code) do

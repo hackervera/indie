@@ -1,0 +1,4 @@
+<h2>Recent posts</h2>
+<%= Enum.map(@files, fn(file) -> %>
+<p><a href="content/<%= file %>"><%= file %></a></p>
+<%= end) %>

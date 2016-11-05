@@ -1,14 +1,22 @@
 defmodule Indie.Callback do
+  require Logger
+
   @doc """
   Module to store indieweb callbacks
   """
 
-  def generate_token(code) do
-    "123"
-  end
 
-
-  def authorize do
-    "123"
+  def authorize(conn, token) do
+    Logger.debug inspect token
+    Logger.debug inspect conn.params
+    # true
+    cond do
+      token == "123" -> true
+      true -> false
+    end
   end
 end
+
+
+
+
