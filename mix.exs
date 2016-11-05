@@ -39,7 +39,7 @@ defmodule Indie.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      # {:webmention, path: "~/webmention"}
-     {:webmention, github: "tjgillies/webmention", branch: "master"}
+     {:webmention, github: "tjgillies/webmention", ref: "HEAD"}
 
 
     ]
